@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@modules/advertisers": ["src/app/modules/advertisers/index.ts"],
+      "@modules/home": ["src/app/modules/home/index.ts"],
+      "@modules/navigation": ["src/app/modules/navigation/index.ts"],
+      "@modules/search": ["src/app/modules/search/index.ts"],
+      "@modules/table": ["src/app/modules/table/index.ts"],
+      "@core": ["src/app/core/index.ts"],
+      "@core/models": ["src/app/core/models/index.ts"],
+      "@core/services": ["src/app/core/services/index.ts"],
+      "@share/icon": ["src/shared/icon/index.ts"]
+    }
+  }
+}

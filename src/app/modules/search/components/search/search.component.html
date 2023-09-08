@@ -1,0 +1,9 @@
+<div class="input-filed">
+  <input
+    type="text"
+    [placeholder]="placeholder"
+    [ngModel]="value"
+    (ngModelChange)="valueChange.emit($event)"
+  />
+  <mat-icon class="search-icon" svgIcon="search"></mat-icon>
+</div>

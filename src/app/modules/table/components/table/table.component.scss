@@ -1,0 +1,33 @@
+@import 'variables';
+
+$thead-row-height: 56px;
+$tbody-row-height: 52px;
+$visible-row-count: 10;
+
+.table-wrapper {
+  overflow: auto;
+  height: calc($thead-row-height + ($tbody-row-height * $visible-row-count));
+  border-radius: 4px;
+
+  box-shadow: $shadow;
+
+  &::ng-deep {
+    tbody tr {
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px -1px 0px 0px #0000001f inset;
+        background-color: $gray-100;
+      }
+    }
+
+    thead tr {
+      .mat-sort-header-container.mat-sort-header-sorted * {
+        color: $black;
+      }
+
+      &:not(.mat-sort-header-container) {
+        color: $gray-400;
+      }
+    }
+  }
+}

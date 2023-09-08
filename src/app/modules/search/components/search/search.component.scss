@@ -1,0 +1,34 @@
+@import 'variables';
+
+.input-filed {
+  position: relative;
+  width: 336px;
+
+  input {
+    height: 40px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid $gray-300;
+    padding-left: 44px;
+    color: $black;
+    outline: none;
+    font-size: 14px;
+
+    &::placeholder {
+      color: $gray-400;
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::ng-deep {
+      svg path {
+        fill: $gray-400;
+      }
+    }
+  }
+}

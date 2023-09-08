@@ -1,0 +1,11 @@
+:host {
+  flex-grow: 1;
+  margin: 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  h2.page-title {
+    margin-bottom: 0;
+  }
+}

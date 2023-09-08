@@ -1,0 +1,9 @@
+<li
+  class="link-wrapper"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+  [routerLink]="linkConfig.path"
+>
+  <mat-icon [svgIcon]="linkConfig.icon.toString()" class="nav-icon"></mat-icon>
+  <a class="nav-link">{{ linkConfig.text }}</a>
+</li>
