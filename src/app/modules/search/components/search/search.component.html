@@ -3,7 +3,7 @@
     type="text"
     [placeholder]="placeholder"
     [ngModel]="value"
-    (ngModelChange)="valueChange.emit($event)"
+    (ngModelChange)="valueChange.emit($event.trim())"
   />
   <mat-icon class="search-icon" svgIcon="search"></mat-icon>
 </div>

@@ -1,0 +1,27 @@
+<div class="mat-elevation-z8 table-wrapper">
+  <table mat-table [dataSource]="dataSource" matSort>
+    <ng-container *ngFor="let col of displayedColumns">
+      <ng-container [matColumnDef]="col.key?.toString()">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          [disabled]="!sortByFields.includes(col.key)"
+        >
+          {{ col.text }}
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element[col.key] }}</td>
+      </ng-container>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="cols; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: cols"></tr>
+
+    <tr class="mat-row not-found" *matNoDataRow>
+      <td class="mat-cell" [attr.colspan]="cols.length">
+        <p>No results found :(</p>
+        <p>Please try again</p>
+      </td>
+    </tr>
+  </table>
+</div>

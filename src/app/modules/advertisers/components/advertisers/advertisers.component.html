@@ -1,4 +1,10 @@
 <h2 class="page-title">Advertisers</h2>
 
 <app-search placeholder="Search by name..." [(value)]="searchValue"></app-search>
-<app-table />
+<app-table
+  [dataSource]="advertisers"
+  [displayedColumns]="cols"
+  [searchByFields]="searchByFields"
+  [search]="searchValue"
+  [sortByFields]="['name']"
+></app-table>

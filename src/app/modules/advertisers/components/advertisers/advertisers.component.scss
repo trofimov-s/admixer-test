@@ -8,4 +8,11 @@
   h2.page-title {
     margin-bottom: 0;
   }
+
+  &::ng-deep {
+    // set table column width by using mat-column-<columnID>
+    .mat-column-advertiserId {
+      width: 200px;
+    }
+  }
 }
