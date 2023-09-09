@@ -5,6 +5,8 @@ import { AdvertisersHandlerService } from '../../services';
 import { Advertiser } from '@core/models';
 import { SubscriptionDetacher } from '@core/utils';
 import { TableCol } from '@shared/table';
+import { SidebarHandlerService } from '@shared/sidebar';
+import { EditAdvertiserComponent } from '../edit-advertiser/edit-advertiser.component';
 
 @Component({
   selector: 'app-advertisers',
@@ -35,7 +37,10 @@ export class AdvertisersComponent implements OnInit, OnDestroy {
 
   searchByFields: (keyof Advertiser)[] = ['name'];
 
-  constructor(private advertisersHandler: AdvertisersHandlerService) {}
+  constructor(
+    private advertisersHandler: AdvertisersHandlerService,
+    private sidebarHandler: SidebarHandlerService
+  ) {}
 
   ngOnInit(): void {
     this.advertisersHandler.advertisers$
@@ -45,5 +50,9 @@ export class AdvertisersComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.detacher.detach();
+  }
+
+  rowClickHanlder(adv: Advertiser): void {
+    this.sidebarHandler.open(EditAdvertiserComponent, adv);
   }
 }

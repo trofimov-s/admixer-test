@@ -15,7 +15,7 @@
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="cols; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: cols"></tr>
+    <tr mat-row *matRowDef="let row; columns: cols" (click)="rowClick.emit(row)"></tr>
 
     <tr class="mat-row not-found" *matNoDataRow>
       <td class="mat-cell" [attr.colspan]="cols.length">

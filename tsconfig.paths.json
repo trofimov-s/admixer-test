@@ -11,7 +11,8 @@
       "@core/services": ["src/app/core/services/index.ts"],
       "@core/utils": ["src/app/core/utils/index.ts"],
       "@shared/table": ["src/app/shared/table/index.ts"],
-      "@share/icon": ["src/shared/icon/index.ts"]
+      "@share/icon": ["src/shared/icon/index.ts"],
+      "@shared/sidebar": ["src/app/shared/sidebar/index.ts"]
     }
   }
 }

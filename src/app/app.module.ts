@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationModule } from '@modules/navigation';
 import { CoreModule } from '@core';
+import { SidebarModule } from '@shared/sidebar';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { CoreModule } from '@core';
     NavigationModule,
     HttpClientModule,
     CoreModule,
+    SidebarModule,
   ],
   bootstrap: [AppComponent],
 })

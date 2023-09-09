@@ -1,4 +1,12 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource, MatTableDataSourcePaginator } from '@angular/material/table';
 import { TableCol } from '@shared/table';
@@ -46,6 +54,7 @@ export class TableComponent<T> implements AfterViewInit {
   }
 
   @ViewChild(MatSort) private _sort: MatSort;
+  @Output() rowClick = new EventEmitter<T>();
 
   ngAfterViewInit(): void {
     this.dataSource.sort = this._sort;

@@ -1,5 +1,11 @@
 :host {
-  display: flex;
   height: 100%;
-  margin: 20px 0;
+  position: relative;
+  display: block;
+
+  .content {
+    padding: 20px 0;
+    display: flex;
+    height: 100%;
+  }
 }

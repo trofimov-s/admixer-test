@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { SearchModule } from '@modules/search';
-import { AdvertisersComponent } from './components';
+import { AdvertisersComponent, EditAdvertiserComponent } from './components';
 import { TableModule } from '@shared/table';
 import { AdvertisersHandlerService } from './services';
 import { Advertiser } from '@core/models';
@@ -25,7 +25,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(routes), SearchModule, TableModule],
-  declarations: [AdvertisersComponent],
+  declarations: [AdvertisersComponent, EditAdvertiserComponent],
   providers: [AdvertisersHandlerService],
 })
 export class AdvertisersModule {}
