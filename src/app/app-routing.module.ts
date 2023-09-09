@@ -5,11 +5,13 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule),
+    title: 'Admixer | Home',
   },
   {
     path: 'advertisers',
     loadChildren: () =>
       import('./modules/advertisers/advertisers.module').then((m) => m.AdvertisersModule),
+    title: 'Admixer | Advertisers',
   },
   {
     path: '**',

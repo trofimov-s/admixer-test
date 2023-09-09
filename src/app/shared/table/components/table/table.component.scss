@@ -8,6 +8,7 @@ $visible-row-count: 10;
   overflow: auto;
   height: calc($thead-row-height + ($tbody-row-height * $visible-row-count));
   border-radius: 4px;
+  background-color: $white;
 
   box-shadow: $shadow;
 
