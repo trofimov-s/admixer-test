@@ -2,12 +2,12 @@ import { HttpClient } from '@angular/common/http';
 
 export interface EndpointsConfig {
   getTestAdvertisers: string;
-  updateTestAdvertisers: string;
+  updateTestAdvertiser: string;
 }
 
 const endpoints: EndpointsConfig = {
   getTestAdvertisers: 'GetTestAdvertisers',
-  updateTestAdvertisers: 'UpdateTestAdvertisers',
+  updateTestAdvertiser: 'UpdateTestAdvertiser',
 };
 
 export abstract class BaseApiService {

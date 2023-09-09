@@ -1,1 +1,30 @@
-<p>Edit Advertiser Component</p>
+<form class="advertiser-form" [formGroup]="form" (ngSubmit)="confirmFn()">
+  <div class="first-block">
+    <app-input [id]="'name'" [fieldName]="'name'" [formControlName]="'name'" label="Name" />
+    <app-input
+      [id]="'country'"
+      [fieldName]="'country'"
+      [formControlName]="'country'"
+      label="Country"
+    />
+    <app-input
+      [id]="'advertiserId'"
+      [fieldName]="'advertiserId'"
+      [formControlName]="'advertiserId'"
+      label="ID"
+    />
+  </div>
+  <app-input
+    [id]="'campaignCount'"
+    [fieldName]="'campaignCount'"
+    [formControlName]="'campaignCount'"
+    label="Campaign Count"
+  />
+  <app-input
+    [id]="'impressions'"
+    [fieldName]="'impressions'"
+    [formControlName]="'impressions'"
+    label="Impressions"
+  />
+  <app-input [id]="'profit'" [fieldName]="'profit'" [formControlName]="'profit'" label="Profit" />
+</form>

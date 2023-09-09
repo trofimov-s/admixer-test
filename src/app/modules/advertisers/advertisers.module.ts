@@ -8,6 +8,8 @@ import { AdvertisersComponent, EditAdvertiserComponent } from './components';
 import { TableModule } from '@shared/table';
 import { AdvertisersHandlerService } from './services';
 import { Advertiser } from '@core/models';
+import { InputModule } from '@shared/input';
+import { ModalModule } from '@shared/modal';
 
 const routes: Routes = [
   {
@@ -24,7 +26,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes), SearchModule, TableModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    SearchModule,
+    TableModule,
+    InputModule,
+    ModalModule,
+  ],
   declarations: [AdvertisersComponent, EditAdvertiserComponent],
   providers: [AdvertisersHandlerService],
 })

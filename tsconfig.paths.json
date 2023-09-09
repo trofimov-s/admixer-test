@@ -12,7 +12,10 @@
       "@core/utils": ["src/app/core/utils/index.ts"],
       "@shared/table": ["src/app/shared/table/index.ts"],
       "@share/icon": ["src/shared/icon/index.ts"],
-      "@shared/sidebar": ["src/app/shared/sidebar/index.ts"]
+      "@shared/sidebar": ["src/app/shared/sidebar/index.ts"],
+      "@shared/input": ["src/app/shared/input/index.ts"],
+      "@shared/modal": ["src/app/shared/modal/index.ts"],
+      "@shared/button": ["src/app/shared/button/index.ts"]
     }
   }
 }

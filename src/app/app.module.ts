@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NavigationModule } from '@modules/navigation';
 import { CoreModule } from '@core';
 import { SidebarModule } from '@shared/sidebar';
+import { InputModule } from '@shared/input';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { SidebarModule } from '@shared/sidebar';
     HttpClientModule,
     CoreModule,
     SidebarModule,
+    InputModule,
   ],
   bootstrap: [AppComponent],
 })

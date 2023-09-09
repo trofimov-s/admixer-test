@@ -1,4 +1,6 @@
-.example-container {
+@import 'variables';
+
+.sidebar-container {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -6,7 +8,39 @@
   right: 0;
   z-index: 100;
 
-  // .mat-sidenav {
-  //   width: 600px;
-  // }
+  &::ng-deep .mat-drawer-inner-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    padding: 0 24px;
+    height: 66px;
+    border-bottom: 1px solid $gray-300;
+
+    .sidebar-title {
+      margin: 0;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+
+    .close-icon::ng-deep {
+      svg path {
+        fill: $gray-400;
+      }
+    }
+  }
+
+  .sidebar-footer {
+    height: 72px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    border-top: 1px solid $gray-300;
+  }
 }

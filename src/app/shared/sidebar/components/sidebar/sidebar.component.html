@@ -1,6 +1,14 @@
-<mat-sidenav-container class="example-container">
+<mat-sidenav-container class="sidebar-container">
   <mat-sidenav #sidenav mode="over" position="end" [opened]="isOpen$ | async" (closed)="close()">
+    <header class="sidebar-header">
+      <mat-icon class="close-icon" svgIcon="close" (click)="close()"></mat-icon>
+      <p class="sidebar-title">{{ sidebarContext?.title }}</p>
+    </header>
     <ng-container #content></ng-container>
+    <footer class="sidebar-footer">
+      <app-button type="primary" (click)="confirm()">Save</app-button>
+      <app-button type="secondary" (click)="close()">Cancel</app-button>
+    </footer>
   </mat-sidenav>
   <mat-sidenav-content>
     <ng-content></ng-content>

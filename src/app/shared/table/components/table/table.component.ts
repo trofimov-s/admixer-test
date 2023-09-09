@@ -19,7 +19,7 @@ import { TableCol } from '@shared/table';
 })
 export class TableComponent<T> implements AfterViewInit {
   private _displayedColumns: TableCol<T>[];
-  private _dataSource: MatTableDataSource<T, MatTableDataSourcePaginator>;
+  private _dataSource = new MatTableDataSource<T>([]);
 
   cols: (keyof T)[];
 
@@ -46,7 +46,7 @@ export class TableComponent<T> implements AfterViewInit {
 
   @Input({ required: true })
   set dataSource(data: T[]) {
-    this._dataSource = new MatTableDataSource<T>(data);
+    this._dataSource.data = data;
   }
 
   get dataSource(): MatTableDataSource<T, MatTableDataSourcePaginator> {

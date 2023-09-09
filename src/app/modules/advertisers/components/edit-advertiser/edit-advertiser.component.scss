@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  width: 600px;
+  padding: 32px 24px;
+  flex-grow: 1;
+
+  .advertiser-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    .first-block {
+      display: flex;
+      column-gap: 24px;
+
+      &::ng-deep .name {
+        width: 300px;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import 'variables';
+
+.input-field {
+  position: relative;
+
+  input {
+    border: 1px solid $gray-300;
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    padding: 0 16px;
+    outline: none;
+    color: $black;
+
+    &:focus {
+      border-color: $blue;
+
+      & ~ label {
+        color: $blue;
+      }
+    }
+
+    &:focus ~ label,
+    &:valid ~ label {
+      top: 0;
+      background-color: white;
+    }
+
+    &:not(:placeholder-shown):not(:focus) {
+      & ~ label {
+        color: $black;
+      }
+    }
+
+    &.disabled:disabled {
+      color: $gray-400;
+      background-color: $white;
+
+      & ~ label {
+        color: $gray-400;
+        background-color: $white;
+        top: 0;
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    padding: 0 4px;
+    pointer-events: none;
+    transition: all 150ms linear;
+    color: $gray-300;
+
+    transform: translateY(-50%);
+  }
+}

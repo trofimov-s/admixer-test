@@ -1,0 +1,17 @@
+<div class="input-field">
+  <input
+    type="text"
+    class="form-element"
+    [class]="fieldName"
+    [id]="fieldName"
+    [name]="fieldName"
+    [value]="value"
+    [disabled]="disabled"
+    [class.disabled]="disabled"
+    [placeholder]="placeholder"
+    (input)="onChanged($event)"
+    (blur)="touched()"
+    required
+  />
+  <label [for]="fieldName">{{ label }}</label>
+</div>
